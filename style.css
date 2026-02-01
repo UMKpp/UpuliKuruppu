@@ -182,7 +182,172 @@ ul {
     margin-right: 5%;
 }
 
-/* Home Section */
+/* About Section */
+.about-content {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 15px;
+    border-left: 5px solid var(--secondary-color);
+}
+
+/* Projects Section */
+.projects-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.project-card {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background: var(--card-bg);
+    padding: 30px;
+    /* Spacing handled by gap in grid in modern CSS, but using padding for card feel if needed. Design said 'boxes or rectangular banners' */
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Zig-Zag Layout */
+.project-card:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.project-image {
+    flex: 1;
+    height: 300px;
+    background-color: #334155;
+    /* Placeholder color */
+    border-radius: 15px;
+    background-image: linear-gradient(135deg, #334155 0%, #1e293b 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative element for placeholder images */
+.project-image::after {
+    content: 'Project Image';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(255, 255, 255, 0.1);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.project-info {
+    flex: 1;
+}
+
+.project-info h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+
+    .project-card,
+    .project-card:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .project-image {
+        width: 100%;
+        height: 200px;
+    }
+}
+
+/* Skills Grid Fix */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Portfolio Section */
+.portfolio-content {
+    text-align: center;
+    padding: 3rem;
+    background: var(--card-bg);
+    border-radius: 20px;
+    border: 1px dashed var(--secondary-color);
+}
+
+/* Contact Section */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    background: var(--bg-color);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: var(--text-color);
+    font-family: var(--font-main);
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
+}
+
+.contact-form button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.skill-card {
+    background: var(--card-bg);
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* Bouncy effect */
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    cursor: default;
+}
+
+.skill-card:hover {
+    transform: scale(1.15);
+    background: var(--primary-color);
+    color: #fff;
+    box-shadow: 0 10px 20px rgba(56, 189, 248, 0.4);
+}
+
 .hero-section {
     min-height: 100vh;
     display: flex;
@@ -250,6 +415,63 @@ ul {
 
 .highlight {
     color: var(--primary-color);
+}
+
+/* Home Section Animations */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+    overflow: hidden;
+    /* Prevent scrollbars during animation */
+}
+
+.photo-frame {
+    opacity: 0;
+    animation: slideInLeft 1s ease-out forwards 2.5s;
+    /* Delay after splash screen */
+}
+
+.home-right>* {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.motto {
+    animation: fadeInUp 0.8s ease-out forwards 2.7s;
+}
+
+.headline {
+    animation: fadeInUp 0.8s ease-out forwards 2.9s;
+}
+
+.home-right .btn {
+    animation: fadeInUp 0.8s ease-out forwards 3.1s;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Responsive */
