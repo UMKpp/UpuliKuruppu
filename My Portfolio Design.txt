@@ -1,0 +1,145 @@
+My Portfolio Design
+
+First, I want my website to have an innovative splash screen on the first visit, and then it should navigate to the home page.
+
+The website should have the following pages:
+
+Home
+
+About Me
+
+Skills
+
+Projects
+
+Portfolio
+
+Contact Me
+
+Home Page:
+
+Start with a four-word motto that reflects a developer’s mindset.
+
+Display in large letters: “I’m an Undergraduate Software Engineer.”
+
+Include a “Learn More” button below, which links to the Projects page.
+
+All the text should appear on the right side.
+
+On the left side, include an oval photo frame with my photo inside.
+
+About Me Section:
+
+Include details that I will provide later.
+
+Skills Section:
+
+Display skills as small buttons.
+
+When the cursor hovers over a skill, it should zoom in or show a hover effect.
+
+Projects Section:
+
+Include four projects.
+
+Display them in boxes or rectangular banners arranged in a zig-zag layout.
+
+Each box should include:
+
+The project name as a header
+
+A related image
+
+A “Learn More” button
+
+When the cursor hovers over a project, there should be an animation effect.
+
+Clicking the project should open it with a sliding animation.
+
+Contact Section:
+
+Include fields for:
+
+Name
+
+Mobile number
+
+Message
+
+The website should be neat, professional, and innovative.
+
+
+
+
+Portfolio Design
+
+Splash Screen (first visit only, auto-navigates to Home)
+Navigation Bar (persistent across all pages)
+
+Home
+About Me
+Skills
+Projects
+Portfolio
+Contact Me
+
+
+Home Page
+
+Left Side
+
+Oval photo frame (your photo)
+
+
+Right Side
+
+Four-word developer motto (e.g., "Build. Learn. Grow. Repeat.")
+Headline: "I'm an Undergraduate Software Engineer."
+"Learn More" button → links to Projects
+
+
+
+
+About Me Page
+
+Your details (to be provided later)
+
+
+Skills Page
+
+Grid of skill buttons
+
+Hover effect → zoom in / highlight
+
+
+
+
+Projects Page
+
+4 project cards in a zig-zag layout
+
+Each card contains:
+
+Project name (header)
+Related image
+"Learn More" button
+
+
+Hover → animation effect
+Click → sliding animation to open project detail
+
+
+
+
+Portfolio Page
+
+(Separate from Projects — likely a curated showcase or gallery view; you can clarify what goes here vs. Projects)
+
+
+Contact Me Page
+
+Form fields:
+
+Name
+Mobile Number
+Message
