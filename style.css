@@ -225,14 +225,15 @@ ul {
     background-color: #334155;
     /* Placeholder color */
     border-radius: 15px;
-    background-image: linear-gradient(135deg, #334155 0%, #1e293b 100%);
+    background-image: none;
+    background-position: center;
+    background-size: cover;
     position: relative;
     overflow: hidden;
 }
 
 /* Decorative element for placeholder images */
 .project-image::after {
-    content: 'Project Image';
     position: absolute;
     top: 50%;
     left: 50%;
@@ -240,6 +241,13 @@ ul {
     color: rgba(255, 255, 255, 0.1);
     font-size: 1.5rem;
     font-weight: 700;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
 }
 
 .project-info {
