@@ -187,4 +187,62 @@ document.addEventListener('DOMContentLoaded', () => {
 
     init();
     animate();
+
+    // --- Skills Section Interactions ---
+    const skillsData = {
+        "Programming": ["Java", "Python", "JavaScript", "C#", "C++"],
+        "Web Dev": ["HTML5", "CSS3", "JavaScript (ES6+)", "React", "Tailwind CSS"],
+        "Backend": ["Node.js", "Express.js", "MySQL", "MongoDB", "REST APIs"],
+        "Tools": ["Git", "GitHub", "VS Code", "Postman", "Figma"],
+        "Core Skills": ["Data Structures", "OOP", "Algorithms", "Problem Solving", "Teamwork"]
+    };
+
+    const categoriesContainer = document.querySelector('.skills-categories');
+    const displayContainer = document.querySelector('.skills-display');
+
+    // Initialize Categories
+    Object.keys(skillsData).forEach(category => {
+        const btn = document.createElement('div');
+        btn.classList.add('skill-category');
+        btn.textContent = category;
+        btn.setAttribute('data-category', category);
+        categoriesContainer.appendChild(btn);
+
+        // Interaction Events
+        // Click interaction
+        btn.addEventListener('click', () => {
+            activateCategory(btn);
+        });
+
+        // Hover interaction for desktop
+        btn.addEventListener('mouseenter', () => {
+            activateCategory(btn);
+        });
+    });
+
+    function activateCategory(activeBtn) {
+        // Remove active class from all
+        document.querySelectorAll('.skill-category').forEach(b => b.classList.remove('active'));
+        // Add active class to current
+        activeBtn.classList.add('active');
+
+        // Get category data
+        const categoryName = activeBtn.getAttribute('data-category');
+        const skills = skillsData[categoryName];
+
+        // Clear display
+        displayContainer.innerHTML = '';
+
+        // Add skill tags with staggered animation
+        skills.forEach((skill, index) => {
+            const tag = document.createElement('div');
+            tag.classList.add('skill-tag');
+            tag.textContent = skill;
+            tag.style.animationDelay = `${index * 0.1}s`; // Stagger effect
+            displayContainer.appendChild(tag);
+        });
+    }
+
+    // Default: Trigger the first category on load (optional, or kept empty)
+    // setTimeout(() => activateCategory(categoriesContainer.firstChild), 500);
 });
