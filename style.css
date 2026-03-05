@@ -1,16 +1,16 @@
 :root {
     /* Colors */
-    --bg-color: #0F172A;
-    --text-color: #E2E8F0;
-    --primary-color: #38BDF8;
-    /* Sky Blue */
-    --secondary-color: #818CF8;
-    /* Indigo */
-    --accent-color: #F472B6;
-    /* Pink */
-    --card-bg: #1E293B;
-    --nav-bg: rgba(15, 23, 42, 0.9);
-    --hover-bg: #334155;
+    --bg-color: #FFFFFF;
+    --text-color: #000000;
+    --primary-color: #000000;
+    /* Black */
+    --secondary-color: #555555;
+    /* Gray */
+    --accent-color: #000000;
+    /* Black */
+    --card-bg: #F5F5F5;
+    --nav-bg: rgba(255, 255, 255, 0.9);
+    --hover-bg: #E0E0E0;
 
     /* Typography */
     --font-main: 'Outfit', sans-serif;
@@ -82,12 +82,12 @@ ul {
 .primary-btn {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: #fff;
-    box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .primary-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(56, 189, 248, 0.5);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
 }
 
 .secondary-btn {
@@ -205,7 +205,7 @@ ul {
     padding: 30px;
     /* Spacing handled by gap in grid in modern CSS, but using padding for card feel if needed. Design said 'boxes or rectangular banners' */
     border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -222,7 +222,7 @@ ul {
 .project-image {
     flex: 1;
     height: 300px;
-    background-color: #334155;
+    background-color: #E0E0E0;
     /* Placeholder color */
     border-radius: 15px;
     background-image: none;
@@ -238,7 +238,7 @@ ul {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: rgba(255, 255, 255, 0.1);
+    color: rgba(0, 0, 0, 0.1);
     font-size: 1.5rem;
     font-weight: 700;
 }
@@ -280,7 +280,7 @@ ul {
 
 .project-info p {
     margin-bottom: 20px;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(0, 0, 0, 0.8);
 }
 
 .tech-stack {
@@ -291,12 +291,12 @@ ul {
 }
 
 .tech-badge {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.05);
     padding: 5px 15px;
     border-radius: 15px;
     font-size: 0.85rem;
     color: var(--primary-color);
-    border: 1px solid rgba(56, 189, 248, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 /* Skills Section Redesign */
@@ -322,7 +322,7 @@ ul {
     border-radius: 50px;
     font-weight: 600;
     color: var(--text-color);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.05);
     cursor: pointer;
     transition: all 0.3s ease;
     position: relative;
@@ -332,13 +332,13 @@ ul {
 .skill-category:hover {
     transform: scale(1.05);
     border-color: var(--primary-color);
-    box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .skill-category.active {
     background: var(--primary-color);
     color: #fff;
-    box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
     transform: scale(1.1);
 }
 
@@ -361,7 +361,7 @@ ul {
 }
 
 .skill-tag {
-    background: rgba(56, 189, 248, 0.1);
+    background: rgba(0, 0, 0, 0.1);
     color: var(--primary-color);
     border: 1px solid var(--primary-color);
     padding: 10px 25px;
@@ -427,7 +427,7 @@ ul {
     width: 100%;
     padding: 12px 15px;
     background: var(--bg-color);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     color: var(--text-color);
     font-family: var(--font-main);
@@ -438,7 +438,7 @@ ul {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .contact-form button {
@@ -498,7 +498,7 @@ ul {
     border: 5px solid var(--primary-color);
     overflow: hidden;
     position: relative;
-    box-shadow: 0 0 30px rgba(56, 189, 248, 0.2);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
     display: flex;
     align-items: center;
     justify-content: center;
